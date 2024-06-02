@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript for Beginners</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="welcomeMessage">Добро пожаловать в мир JavaScript!</h1>
+    </header>
+    <main>
+
+        <section id="introduction">
+            <h2>About JavaScript</h2>
+            <p>JavaScript — это язык программирования, который используется для создания интерактивных и динамичных веб-страниц. Он позволяет добавлять анимацию, обрабатывать данные и создавать сложные веб-приложения.</p>
+        </section>
+
+        <section id="usage">
+            <h2>Why Learn JavaScript?</h2>
+            <p>JavaScript необходим для веб-разработки. Он используется для:</p>
+            <ul>
+                <li>Создания динамичных и интерактивных веб-страниц</li>
+                <li>Разработки веб-приложений и мобильных приложений</li>
+                <li>Создания серверных приложений с использованием Node.js</li>
+                <li>Разработки игр</li>
+            </ul>
+            <p>Однако JavaScript может оказаться не лучшим выбором для решения сложных вычислительных задач или системного программирования, где больше подходят такие языки, как C++ или Rust.</p>
+        </section>
+
+
+        <section id="taskMenu">
+            <h2>Practical tasks</h2>
+            <pre id="newButton"></pre>
+        </section>
+
+        <div id="taskModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeTaskModal()">&times;</span>
+                <h2 class="modal-title" id="taskTitle"></h2>
+                <p class="modal-text" id="taskDescription"></p>
+                <pre class="modal-code" id="taskCode"></pre>
+                <div class="modal-text" id="output"></div>   
+                <button class="modal-button" id="toggleAnswerButton" onclick="toggleAnswer()">Показать/Скрыть ответ</button>
+            </div>
+        </div>
+
+       
+
+
+        <section id="quiz">
+            <h2>JavaScript Quiz</h2>
+            <button onclick="startQuiz()">Start Quiz</button>
+        </section>
+
+        <div id="quizModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeQuizModal()">&times;</span>
+                <div class="modal-title" id="header">
+                <h2 class="modal-text"></h2> 
+                </div>
+
+                <ui class="quiz-list" id="list">
+                    <li>
+                        <label>
+                            <input type="radio" class="answer" name="answer">
+                            <span>Oтвет </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" class="answer" name="answer">
+                            <span>Oтвет </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" class="answer" name="answer">
+                            <span>Oтвет </span>
+                        </label>
+                    </li>
+                </ui>
+                <button class="modal-button" id="submit">Ответить</button>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <footer>
+        <p>&copy; 2024 JavaScript for Beginners</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+
+
+</body>
+</html>
